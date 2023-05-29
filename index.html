@@ -9,10 +9,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap" rel="stylesheet">
+
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="./libs/owlCarousel/assets/owl.carousel.min.css">
+
 </head>
 <body>
 
-    <header class="header">
+    <header class="header ">
         <div class="header-top">
             <div class="header-logo">
                 <a href="./index.html">
@@ -24,7 +31,6 @@
                     <li class="header-nav-list-el"><a href="#">Главная</a></li>
                     <li class="header-nav-list-el"><a href="#">Услуги</a></li>
                     <li class="header-nav-list-el"><a href="#">Цены</a></li>
-                    <li class="header-nav-list-el"><a href="#">Акции</a></li>
                     <li class="header-nav-list-el"><a href="#">Контакты</a></li>
                 </ul>
                 <div class="line"></div>
@@ -55,7 +61,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <section class="main ">
         <div class="container">
             <div class="container-row">
                 <div class="main-services">
@@ -71,19 +77,25 @@
 
                 <form class="main-form">
                     <div class="form-title-wrapper">
-                        <div class="shadow"></div>
                         <h2 class="main-form-title">Оставьте заявку</h2>
                     </div>
-                    <input class="input" type="text" placeholder="Ваше имя *">
-                    <input class="input" type="tel" placeholder="Ваш телефон *">
-                    <input class="button-bell" type="submit" value="Заказать звонок"> 
-
+                    <div class="form-group-name">
+                        <label class="label" for="name">Ваше имя *</label>
+                        <input class="input" type="text" name="name">
+                    </div>
+                    <div class="form-group-phone">
+                        <label class="label" for="phone">Ваш телефон *</label>
+                        <input class="input" type="text" name="phone">
+                    </div>
+                    <div class="button-wrapper">
+                        <input class="button-bell" type="submit" value="Заказать звонок"> 
+                    </div>
                 </form>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
+    <footer class="footer ">
         <div class="container">
             <div class="footer-row">
                 <div class="footer-info">
@@ -101,6 +113,115 @@
         </div>
 
     </footer>
+
+    <section class="section-services none">
+        <header class="section-services__header">
+            <div class="services__header-content">
+                <h2 class="services__header-title">Наши услуги</h2>
+                <img class="services__header-img" src="./img/section-services/services-header/act.svg" alt="">
+                <img class="services__header-img" src="./img/section-services/services-header/borders.svg" alt="">
+                <img class="services__header-img" src="./img/section-services/services-header/plan.svg" alt="">
+                <img class="services__header-img" src="./img/section-services/services-header/sheme.svg" alt="">
+                <img class="services__header-img" src="./img/section-services/services-header/takeaway.svg" alt="">
+                <img class="services__header-img" src="./img/section-services/services-header/call.svg" alt="">               
+            </div>
+
+        </header>
+        <!-- Слайдер -->
+        <div class="section-services__slider">
+            <!-- Вперед, назад кнопки -->
+            <button class="slider-services__arrow slider-services__arrow--left">
+                <img class="slider__arrow-img-left" src="./img/section-services/services-icons/arrow-left.svg" alt="left">
+            </button>
+            <button class="slider-services__arrow slider-services__arrow--right">
+                <img class="slider__arrow-img-right"  src="./img/section-services/services-icons/arrow-right.svg" alt="right">
+            </button>
+            <!-- // Вперед, назад кнопки -->
+            <div class="slider owl-carousel owl-theme">
+                <!-- Слайды -->
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--borders">
+                        <img src="./img/section-services/services-slider/borders-img.png" alt="Межевание">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--borders" src="./img/section-services/services-icons/borders-icon.svg" alt="Межевание">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--borders">Межевание</h2>
+                        </div>
+                        <p class="slider-item__card-row-text slider-item__card-row-text--borders">Установление границ земельного участка. От 2х рабочих дней.</p>
+                    </div>
+                </div>
+                
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--plan">
+                        <img src="./img/section-services/services-slider/plan.png" alt="Технический план">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--plan" src="./img/section-services/services-icons/plan-icon.svg" alt="Технический план">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--plan">Технический план</h2>
+                        </div>
+                        <p class="slider-item__card-row-text slider-item__card-row-text--plan">Документ составляется в отношении зданий, объектов строительства.</p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--sheme">
+                        <img src="./img/section-services/services-slider/sheme.png" alt="Схемы расположения земельного участка">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--sheme" src="./img/section-services/services-icons/scheme-icon.svg" alt="Схемы земельного участка">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--sheme">Схемы расположения земельного участка</h2>
+                        </div>
+                        <p class="slider-item__card-row-text slider-item__card-row-text--sheme">Подготовка схемы осуществляется с учетом утвержденных документов.</p>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--takeaway">
+                        <img src="./img/section-services/services-slider/takeaway.png" alt="Вынос границ">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--takeaway" src="./img/section-services/services-icons/takeaway-icon.svg" alt="Вынос границ">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--takeaway">Вынос границ</h2>
+                        </div>
+                        <p class="slider-item__card-row-text slider-item__card-row-text--takeaway">Определение и закрепление на местности поворотных точек участка.</p>
+                    </div>
+                </div>  
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--planet">
+                        <img src="./img/section-services/services-slider/planet.png" alt="Не нашли нужное?">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--phone" src="./img/section-services/services-icons/phone-icon.svg" alt="Не нашли нужное?">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--planet">Не нашли нужное? Позвоните нам!<h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-item">
+                    <div class="slider-item__card-img slider-item__card-img--akt">
+                        <img src="./img/section-services/services-slider/akt.png" alt="Акт обследования">
+                    </div>
+                    <div class="slider-item__card-content">
+                        <div class="slider-item__card-row">
+                            <img class="icon icon--akt" src="./img/section-services/services-icons/act-icon.svg" alt="Акт обследования">
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--akt">Акт обследования</h2>
+                        </div>
+                        <p class="slider-item__card-row-text slider-item__card-row-text--akt">Документ является заключением о состоянии данного объекта на момент обследования</p>
+                    </div>
+                </div>
+                <!-- // Слайды -->
+            </div>
+        </div>
+        <!-- //Слайдер -->
+
+    </section>
+
+    <!-- Скрипты карусели -->
+    <script src="./libs/jquery-3.6.0.min.js"></script>
+    <script src="./libs/owlCarousel/owl.carousel.min.js"></script>
+    <script src="./js/carousel.js"></script>
     
 </body>
 </html>
