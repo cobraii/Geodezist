@@ -27,13 +27,13 @@
                     <img class="img-logo" src="./img/header/logo.png" alt="Логотип">
                 </a>
             </div>
-             <div class="block block--active">
+             <div class="block">
                 <nav class="header-nav">
                     <ul class="header-nav-list" >
-                        <li class="header-nav-list-el"><a href="#">Главная</a></li>
-                        <li class="header-nav-list-el"><a href="#">Услуги</a></li>
-                        <li class="header-nav-list-el"><a href="#">Цены</a></li>
-                        <li class="header-nav-list-el"><a href="#">Контакты</a></li>
+                        <li class="header-nav-list-el">Главная</li>
+                        <li class="header-nav-list-el" id="services">Услуги</li>
+                        <li class="header-nav-list-el" id="table">Цены</li>
+                        <li class="header-nav-list-el" id="contact">Контакты</li>
                     </ul>
                     <div class="line"></div>
                 </nav>
@@ -63,7 +63,7 @@
             </div>
             
             <div class="nav-icon-wrapper">
-                <div class="nav-icon nav-icon--active"></div>
+                <div class="nav-icon"></div>
             </div>
         </div>
     </header>
@@ -102,7 +102,7 @@
         </div>
     </section>
 
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
             <div class="footer-row">
                 <div class="footer-info">
@@ -121,7 +121,7 @@
 
     </footer>
 
-    <section class="section-services none">
+    <section class="section-services" id="services-section">
         <header class="section-services__header">
             <div class="services__header-content">
                 <div>
@@ -141,87 +141,86 @@
         <!-- Слайдер -->
         <div class="section-services__slider">
             <!-- Вперед, назад кнопки -->
-            <button class="slider-services__arrow slider-services__arrow--left">
+            <button class="slider-services__arrow slider-services__arrow--left arrow-icon">
                 <svg viewBox="0 0 23 38" >
-                    <path d="M8.36444 19.0015L23 33.7811L18.8163 38L-1.79698e-07 19.0015L18.8163 1.49992e-06L22.997 4.22488L8.36149 19.0045L8.36444 19.0015Z" fill="#F8F8F8"/>
+                    <path d="M8.36444 19.0015L23 33.7811L18.8163 38L-1.79698e-07 19.0015L18.8163 1.49992e-06L22.997 4.22488L8.36149 19.0045L8.36444 19.0015Z"/>
                 </svg>
             </button>
-            <button class="slider-services__arrow slider-services__arrow--right">
-                <svg  viewBox="0 0 23 38">
-                    <path d="M14.6356 18.9985L0 4.2189L4.1837 0L23 18.9985L4.1837 38L0.00295787 33.7751L14.6385 18.9955L14.6356 18.9985Z" fill="#F8F8F8"/>
+            <button class="slider-services__arrow slider-services__arrow--right arrow-icon">
+                <svg viewBox="0 0 23 38">
+                    <path d="M14.6356 18.9985L0 4.2189L4.1837 0L23 18.9985L4.1837 38L0.00295787 33.7751L14.6385 18.9955L14.6356 18.9985Z"/>
                 </svg>
             </button>
             <!-- // Вперед, назад кнопки -->
             <div class="slider owl-carousel owl-theme">
                 <!-- Слайды -->
-                <div class="slider-item">
+                <div class="slider-item" id="slide-1">
                     <div class="slider-item__card-img slider-item__card-img--borders">
                         <img src="./img/section-services/services-slider/borders-img.png" alt="Межевание">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--borders" src="./img/section-services/services-icons/borders-icon.svg" alt="Межевание">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--borders">Межевание</h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--borders active" id="title-1">Межевание</h2>
                         </div>
                         <p class="slider-item__card-row-text slider-item__card-row-text--borders">Установление границ земельного участка. От 2х рабочих дней.</p>
                     </div>
-                </div>
-                
-                <div class="slider-item">
+                </div>             
+                <div class="slider-item" id="slide-2">
                     <div class="slider-item__card-img slider-item__card-img--plan">
                         <img src="./img/section-services/services-slider/plan.png" alt="Технический план">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--plan" src="./img/section-services/services-icons/plan-icon.svg" alt="Технический план">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--plan">Технический план</h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--plan" id="title-2">Технический план</h2>
                         </div>
                         <p class="slider-item__card-row-text slider-item__card-row-text--plan">Документ составляется в отношении зданий, объектов строительства.</p>
                     </div>
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" id="slide-3">
                     <div class="slider-item__card-img slider-item__card-img--sheme">
                         <img src="./img/section-services/services-slider/sheme.png" alt="Схемы расположения земельного участка">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--sheme" src="./img/section-services/services-icons/scheme-icon.svg" alt="Схемы земельного участка">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--sheme">Схемы расположения земельного участка</h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--sheme" id="title-3">Схемы расположения земельного участка</h2>
                         </div>
                         <p class="slider-item__card-row-text slider-item__card-row-text--sheme">Подготовка схемы осуществляется с учетом утвержденных документов.</p>
                     </div>
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" id="slide-4">
                     <div class="slider-item__card-img slider-item__card-img--takeaway">
                         <img src="./img/section-services/services-slider/takeaway.png" alt="Вынос границ">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--takeaway" src="./img/section-services/services-icons/takeaway-icon.svg" alt="Вынос границ">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--takeaway">Вынос границ</h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--takeaway" id="title-4">Вынос границ</h2>
                         </div>
                         <p class="slider-item__card-row-text slider-item__card-row-text--takeaway">Определение и закрепление на местности поворотных точек участка.</p>
                     </div>
                 </div>  
-                <div class="slider-item">
+                <div class="slider-item" id="slide-5">
                     <div class="slider-item__card-img slider-item__card-img--planet">
                         <img src="./img/section-services/services-slider/planet.png" alt="Не нашли нужное?">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--phone" src="./img/section-services/services-icons/phone-icon.svg" alt="Не нашли нужное?">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--planet">Не нашли нужное? Позвоните нам!<h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--planet" id="title-5">Не нашли нужное? Позвоните нам!<h2>
                         </div>
                     </div>
                 </div>
-                <div class="slider-item">
+                <div class="slider-item" id="slide-6">
                     <div class="slider-item__card-img slider-item__card-img--akt">
                         <img src="./img/section-services/services-slider/akt.png" alt="Акт обследования">
                     </div>
                     <div class="slider-item__card-content">
                         <div class="slider-item__card-row">
                             <img class="icon icon--akt" src="./img/section-services/services-icons/act-icon.svg" alt="Акт обследования">
-                            <h2 class="slider-item__card-row-title slider-item__card-row-title--akt">Акт обследования</h2>
+                            <h2 class="slider-item__card-row-title slider-item__card-row-title--akt" id="title-6">Акт обследования</h2>
                         </div>
                         <p class="slider-item__card-row-text slider-item__card-row-text--akt">Документ является заключением о состоянии данного объекта на момент обследования</p>
                     </div>
@@ -233,7 +232,7 @@
 
     </section>
 
-    <section class="section-table none">
+    <section class="section-table" id="table-section">
         <div class="section-table-wrapper">
             <img class="section-table-img" src="./img/section-table/semka.png" alt="Исполнительная съемка">
             <div class="section-table__title-wrapper">
@@ -282,7 +281,7 @@
         </div>
     </section>   
 
-    <section class="section-questions none">
+    <section class="section-questions">
         <div class="section-questions__row">
             <div class="section-questions__content">
                 <div class="section-questions__content-wrapper">
@@ -309,7 +308,7 @@
 
     </section>
 
-    <section class="sections__contacts none">
+    <section class="sections__contacts" id="contacts-section">
         <div class="sections__contacts-contanier">
             <div class="sections__contacts-contanier-row">
                 <div class="sections__contacts-contanier-wrapper">

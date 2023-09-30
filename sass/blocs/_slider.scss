@@ -196,6 +196,14 @@
 
 }
 
+.arrow-icon {
+  fill: #F8F8F8;
+}
+
+.arrow-icon:hover {
+  fill: #37B1F5;
+}
+
 .slider-item {
   margin-left: 15px;
   margin-right: 15px;
@@ -472,6 +480,10 @@
     }
   }
 
+}
+
+.slider-item__card-row-title.active {
+  color: #37B1F5;
 }
 
 .slider-item__card-row-text {

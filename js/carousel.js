@@ -15,7 +15,7 @@ $(document).ready(function () {
 		autoWidth: true
 		
 	});
-
+	
 	// Находим кастомные кнопки Вперед / Назад
 	const prev = $('.slider-services__arrow--left');
 	const next = $('.slider-services__arrow--right');
